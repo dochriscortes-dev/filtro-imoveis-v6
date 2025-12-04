@@ -1,0 +1,201 @@
+/* Force specificity with #apaf-search-bar */
+#apaf-search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative; /* Ensure it stays in context */
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: inherit; /* Inherit theme font */
+}
+
+/* Ensure inputs inside the bar look good */
+#apaf-search-bar select,
+#apaf-search-bar input[type="text"],
+#apaf-search-bar button {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+#apaf-search-bar select {
+    background: #f9f9f9;
+    min-width: 150px;
+}
+
+/* Toggle Group Styling */
+.apaf-toggle-group {
+    display: flex;
+    gap: 10px;
+}
+
+.apaf-toggle-group label {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Search Button */
+#apaf-search-bar #apaf-submit-btn {
+    background-color: #1F4E3D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 25px;
+}
+
+#apaf-search-bar #apaf-submit-btn:hover {
+    background-color: #143529;
+}
+
+/* Advanced Filters Link */
+#apaf-advanced-filters-trigger {
+    color: #333;
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Modal Styling */
+#apaf-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none; /* Hidden by default, toggled by JS */
+    justify-content: center;
+    align-items: center;
+}
+
+.apaf-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.apaf-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#apaf-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+#apaf-modal-close:hover {
+    color: #333;
+}
+
+.apaf-field-group {
+    margin-bottom: 20px;
+}
+
+.apaf-field-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Checkbox Grid */
+.apaf-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Specs Row (Square Divs) */
+.apaf-specs-row {
+    display: flex;
+    gap: 10px;
+}
+
+.spec-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s;
+}
+
+.spec-btn:hover {
+    border-color: #1F4E3D;
+}
+
+.spec-btn.active {
+    background-color: #1F4E3D; /* Green background */
+    color: white;
+    border-color: #1F4E3D;
+}
+
+/* Price Inputs */
+.apaf-price-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.apaf-price-inputs input {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#apaf-apply-filters {
+    width: 100%;
+    padding: 12px;
+    background-color: #1F4E3D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #apaf-search-bar {
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 10px;
+    }
+
+    #apaf-search-bar select,
+    #apaf-search-bar #apaf-submit-btn {
+        width: 100%;
+    }
+}
